@@ -1,0 +1,14 @@
+<h2>Welcome to Yelp like</h2>
+<h3>Have a look on the restaurants</h3>
+
+<% @restaurants.each do |restaurant| %>
+  <ul>
+    <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+    <li><%= restaurant.address %></li>
+    <li><%= restaurant.phone_number %></li>
+    <li><%= restaurant.category %></li>
+    <hr>
+  </ul>
+<% end %>
+
+<%= link_to "Add a restaurant", new_restaurant_path, class: "btn btn-primary" %>

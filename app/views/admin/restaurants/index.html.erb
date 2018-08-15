@@ -1,0 +1,17 @@
+<h2>Welcome to Yelp like</h2>
+<h3>Have a look on the restaurants</h3>
+
+<% @restaurants.each do |restaurant| %>
+  <ul>
+    <%= link_to "Edit restaurant", edit_admin_restaurant_path(restaurant), class: "btn btn-primary" %>
+    <br>
+    <li><%= link_to "", admin_restaurant_path(restaurant), class: "glyphicon glyphicon-trash",
+    method: :delete,
+    data: { confirm: "Are you sure?" } %></li>
+    <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+    <li><%= restaurant.address %></li>
+    <li><%= restaurant.phone_number %></li>
+    <li><%= restaurant.category %></li>
+    <hr>
+  </ul>
+<% end %>

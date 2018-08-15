@@ -1,0 +1,9 @@
+<%= simple_form_for @restaurant do |f| %>
+  <%= f.input :name %>
+  <%= f.input :phone_number %>
+  <%= f.input :address %>
+  <%= f.input :category %>
+  <%= f.submit "add a restaurant", class: "btn btn-primary" %>
+<% end %>
+
+<%= link_to "Back to list", restaurants_path, class: "btn btn-primary" %>
